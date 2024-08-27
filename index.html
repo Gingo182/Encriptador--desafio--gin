@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="archivo.css">
+</head>
+
+<body>
+    <header>
+        <div class="cabecera">
+            <h1><img class="logo" src="imagenes/Logo.png" alt="Logo Alura"></h1>
+        </div>
+    </header>
+
+    <div class="primer_bloque">
+        <div class="primero">
+            <div>
+                <input class="entrada_texto" type="text" placeholder="Ingrese el texto aquí" />
+            </div>
+            <div class="avisos">  
+                <img id="imagen_exclamacion"  src="imagenes/Group.png" alt="" srcset="">
+                <p class="parrafo1">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="botones_principales">
+                <input type="button" class="boton_encriptar" value="Encriptar">
+                <input type="button" class="boton_desencriptar" value="Desencriptar">
+            </div>
+        </div>
+
+        <div class="segundo_bloque">
+            <div id="segundo">
+                <div class="muñeco">
+                    <img id="imagen_muñeco"  src="imagenes/Muñeco.png" alt="" srcset="">
+                </div>
+                <div id="mensajes">
+                    <p id="parrafo2">Ningún mensaje fue encontrado</p>
+                    <p id="parrafo3">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+
+                <textarea class="resultado_texto" id="resultadotexto" style = "width: 400px;"  ></textarea>
+
+                <div class="boton_secundario">
+                    <input type="button" id="copiar" class="boton_copiar" value="Copiar" >
+                </div>
+            
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        const textarea = document.getElementById('textoResultado');
+      
+        textarea.addEventListener('input', function() {
+          this.style.height = 'auto';
+          this.style.height = (this.scrollHeight) + 'px';
+        });
+    </script>
+
+
+</body>        
